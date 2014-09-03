@@ -1,0 +1,89 @@
+defaults: &DEFAULTS
+  app: &APP_DEFAULTS
+    workspace: ci.xcworkspace
+    scheme: ci
+    configuration: Release
+    display_name: ci
+    bundle_identifier: com.company.ci-test
+    version: 1.0
+    environment_plist: ci/Resources/Environment.plist
+  archive:
+    directory: target
+    base_name: ci
+  simulator:
+    sdk: iphonesimulator7.1
+    destination: '"platform=iOS Simulator,name=iPhone Retina (4-inch)"'
+  codesign: &CODESIGN_DEFAULTS
+    signing_identity: '"iPhone Distribution: Vincent Garrigues"'
+    provisioning_profile: provisioning_profile
+  deploy: &DEPLOY_DEFAULTS
+    token: deploy_token
+    app_id: application_id
+  environment: &ENVIRONMENT_DEFAULTS
+    api: &API_DEFAULTS
+      base_url: https://api.company.com
+      client_id: client_id
+
+development:
+  <<: *DEFAULTS
+  app:
+    <<: *APP_DEFAULTS
+    display_name: dev
+    bundle_identifier: com.company.ci-test-dev
+    configuration: Debug
+  codesign:
+    <<: *CODESIGN_DEFAULTS
+    signing_identity: '"iPhone Developer: Vincent Garrigues"'
+  environment:
+    <<: *ENVIRONMENT_DEFAULTS
+    api:
+      <<: *API_DEFAULTS
+      base_url: https://api-dev.company.com
+
+alpha:
+  <<: *DEFAULTS
+  app:
+    <<: *APP_DEFAULTS
+    display_name: α
+    bundle_identifier: com.company.ci-test-alpha
+  codesign:
+    <<: *CODESIGN_DEFAULTS
+    provisioning_profile: provisioning/alpha.mobileprovision
+  deploy:
+    <<: *DEPLOY_DEFAULTS
+    app_id: alpha_app_id
+  environment:
+    <<: *ENVIRONMENT_DEFAULTS
+    api:
+      <<: *API_DEFAULTS
+      base_url: https://api-alpha.company.com
+
+beta:
+  <<: *DEFAULTS
+  app:
+    <<: *APP_DEFAULTS
+    display_name: β
+    bundle_identifier: com.company.ci-test-beta
+  codesign:
+    <<: *CODESIGN_DEFAULTS
+    provisioning_profile: provisioning/beta.mobileprovision
+  deploy:
+    <<: *DEPLOY_DEFAULTS
+    app_id: beta_app_id
+  environment:
+    <<: *ENVIRONMENT_DEFAULTS
+    api:
+      <<: *API_DEFAULTS
+      base_url: https://api-beta.company.com
+
+adhoc:
+  <<: *DEFAULTS
+  codesign:
+    <<: *CODESIGN_DEFAULTS
+    provisioning_profile: provisioning/adhoc.mobileprovision
+
+release:
+  <<: *DEFAULTS
+  codesign:
+    <<: *CODESIGN_DEFAULTS
+    provisioning_profile: provisioning/appstore.mobileprovision

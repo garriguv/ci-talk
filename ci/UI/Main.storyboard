@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2oM-pG-eM4">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="f9k-Xe-eVJ">
+            <objects>
+                <viewController id="2oM-pG-eM4" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gcv-jX-3oV"/>
+                        <viewControllerLayoutGuide type="bottom" id="rho-ok-3ma"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g2r-T1-VC7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bundle identifier" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFI-RW-tIs">
+                                <rect key="frame" x="20" y="20" width="123" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="version" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odr-8o-f59">
+                                <rect key="frame" x="20" y="49" width="56" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="API" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yU8-QL-bj6">
+                                <rect key="frame" x="20" y="78" width="28" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="base_url" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfx-eP-HkZ">
+                                <rect key="frame" x="20" y="107" width="65" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="client_id" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BmA-lf-Km8">
+                                <rect key="frame" x="20" y="136" width="64" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BmA-lf-Km8" firstAttribute="top" secondItem="lfx-eP-HkZ" secondAttribute="bottom" constant="8" id="1Nb-nT-isJ"/>
+                            <constraint firstItem="EFI-RW-tIs" firstAttribute="leading" secondItem="g2r-T1-VC7" secondAttribute="leading" constant="20" id="4ua-Ix-zhH"/>
+                            <constraint firstItem="lfx-eP-HkZ" firstAttribute="leading" secondItem="g2r-T1-VC7" secondAttribute="leading" constant="20" id="8vK-ec-twF"/>
+                            <constraint firstItem="yU8-QL-bj6" firstAttribute="leading" secondItem="g2r-T1-VC7" secondAttribute="leading" constant="20" id="CHb-An-caz"/>
+                            <constraint firstItem="odr-8o-f59" firstAttribute="leading" secondItem="g2r-T1-VC7" secondAttribute="leading" constant="20" id="F60-HL-mpf"/>
+                            <constraint firstItem="odr-8o-f59" firstAttribute="top" secondItem="EFI-RW-tIs" secondAttribute="bottom" constant="8" id="SZg-L0-uaz"/>
+                            <constraint firstItem="yU8-QL-bj6" firstAttribute="top" secondItem="odr-8o-f59" secondAttribute="bottom" constant="8" id="ggo-DX-gGt"/>
+                            <constraint firstItem="lfx-eP-HkZ" firstAttribute="top" secondItem="yU8-QL-bj6" secondAttribute="bottom" constant="8" id="qbT-rQ-JBK"/>
+                            <constraint firstItem="BmA-lf-Km8" firstAttribute="leading" secondItem="g2r-T1-VC7" secondAttribute="leading" constant="20" id="wQj-3l-IZ4"/>
+                            <constraint firstItem="EFI-RW-tIs" firstAttribute="top" secondItem="gcv-jX-3oV" secondAttribute="bottom" id="x0V-66-LNr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="baseUrlLabel" destination="lfx-eP-HkZ" id="IWo-Qb-Oql"/>
+                        <outlet property="bundleIdentifierLabel" destination="EFI-RW-tIs" id="E6t-cf-3fL"/>
+                        <outlet property="clientIdLabel" destination="BmA-lf-Km8" id="xhX-RU-7MJ"/>
+                        <outlet property="versionLabel" destination="odr-8o-f59" id="3P0-16-vcu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jkc-N6-503" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="169" y="122"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

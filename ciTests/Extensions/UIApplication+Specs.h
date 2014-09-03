@@ -1,0 +1,2 @@
+@interface UIApplication (Specs)
+@end
